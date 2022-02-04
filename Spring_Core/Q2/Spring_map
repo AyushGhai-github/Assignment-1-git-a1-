@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="question1" class="com.assignmnet_2.Question_Set">
+		<property name="questionId" value="2"/>
+		<property name="question" value="who is your favourite cricketer"/>
+		<property name="answers">
+		<map>
+			<entry key="2" value="Dhoni"/>
+		</map>
+		</property>
+	</bean>
+</beans>
+
