@@ -1,1 +1,16 @@
+package assignment_1.com;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context=new ClassPathXmlApplicationContext("test1.xml");
+		Customer customer1 =(Customer) context.getBean("customer");
+		customer1.customerDetail();
+	}
+
+}
 
