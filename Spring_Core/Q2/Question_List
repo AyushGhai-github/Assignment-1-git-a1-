@@ -1,0 +1,37 @@
+package com.assignmnet_2;
+
+import java.util.List;
+
+//Create a class Question with following attributes: questionId, question, answers.
+public class Question {
+	private int questionId;
+	private String question;
+	private List<String> answers;
+	public int getQuestionId() {
+		return questionId;
+	}
+	public void setQuestionId(int questionId) {
+		this.questionId = questionId;
+	}
+	public String getQuestion() {
+		return question;
+	}
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+	public List<String> getAnswers() {
+		return answers;
+	}
+	public void setAnswers(List<String> answers) {
+		this.answers = answers;
+	}
+	public void Answer()
+	{
+		System.out.println(questionId+"."+question);
+		for(String ans:answers)
+		{
+			System.out.println(ans);
+		}
+	}
+
+}
