@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="ayush1" class="com.assignment_10.Context_Aware">
+		<property name="place" value="Nagpur"/>
+		<property name="demo" ref="Demo"/>
+	</bean>
+	<bean id="Demo" class="com.assignment_10.Demo">
+		<property name="x" value="10"/>
+		<property name="y" value="20"/>
+	</bean>
+</beans>
