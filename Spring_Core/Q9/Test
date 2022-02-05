@@ -1,0 +1,19 @@
+package com.assignmnet_9;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class Test {
+	public static void main(String[] args)
+	{
+		AbstractApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
+		context.registerShutdownHook();
+		Bean_Life_Cycle student1=(Bean_Life_Cycle) context.getBean("Bean");
+		student1.display();
+		
+		Bean_Life_Cycle student2=(Bean_Life_Cycle) context.getBean("Bean1");
+		student2.display();
+	}
+
+}
