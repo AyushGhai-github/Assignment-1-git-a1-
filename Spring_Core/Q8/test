@@ -1,0 +1,24 @@
+package com.assignment_8;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class test {
+	public static void main(String[] args)
+	{
+		AbstractApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
+		context.registerShutdownHook();
+		Ayush student1=(Ayush) context.getBean("ayush1");
+		student1.coding();
+		
+		Ayush student2=(Ayush) context.getBean("ayush2");
+		student2.coding();
+		
+		Ayush student3=(Ayush) context.getBean("ayush3");
+		student3.coding();
+		
+	}
+
+}
