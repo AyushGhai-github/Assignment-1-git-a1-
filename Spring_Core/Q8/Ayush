@@ -1,0 +1,54 @@
+package com.assignment_8;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Ayush implements InitializingBean,DisposableBean {
+	private String name;
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void coding()
+	{
+		System.out.println("i am coding"+getName());
+	}
+
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("destroying the bean");
+		
+	}
+
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("initialising");
+		
+	}
+	public void myInit()
+	{
+		System.out.println("ayush bean is initialise using myInit method");
+	}
+	public void myDestroy()
+	{
+		System.out.println("ayush bean is destroyed using myDestroy method");
+	}
+	@PostConstruct
+	public void postConstruct()
+	{
+		System.out.println("using annotation post construct");
+	}
+	@javax.annotation.PreDestroy
+	public void PreDestroy()
+	{
+		System.out.println("using annotation Pre Destroy");
+	}
+
+}
