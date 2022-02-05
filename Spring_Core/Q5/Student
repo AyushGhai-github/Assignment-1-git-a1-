@@ -1,0 +1,20 @@
+package com.assignmnet_5;
+
+public class School {
+	private String name;
+	private int Total_Student;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getTotal_Student() {
+		return Total_Student;
+	}
+	public void setTotal_Student(int total_Student) {
+		Total_Student = total_Student;
+	}
+	
+
+}
