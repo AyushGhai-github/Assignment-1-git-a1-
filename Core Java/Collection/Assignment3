@@ -1,0 +1,28 @@
+package com.company;
+
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class Assignment3Q3
+{
+    public static void main(String[] args)
+    {
+        ArrayList<String>aobj=new ArrayList<>();
+        aobj.add("ayush");
+        aobj.add("atharv");
+        aobj.add("omkar");
+        aobj.add("poonam");
+        aobj.add("tanmay");
+        aobj.add("pradumnya");
+        System.out.println("printing list in normal order");
+        System.out.println(aobj);
+        ListIterator<String>lobj=aobj.listIterator(aobj.size());
+        System.out.println("reverse order list is");
+        while(lobj.hasPrevious())
+        {
+            System.out.print(" "+lobj.previous());
+        }
+
+    }
+}
+
