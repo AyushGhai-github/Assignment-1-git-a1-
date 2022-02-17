@@ -1,0 +1,49 @@
+@FunctionalInterface
+interface Addition
+{
+    public double addition(int num1,int num2);
+}
+@FunctionalInterface
+interface Subtraction
+{
+    public double subtraction(int num1,int num2);
+}
+@FunctionalInterface
+interface Multiplication
+{
+    public double multiplication(int num1,int num2);
+}
+@FunctionalInterface
+interface Division
+{
+    public double division(int num1,int num2);
+}
+public class Assignment4Q1
+{
+    public static void main(String[] args)
+    {
+        Addition aobj =(num1, num2)->{
+            System.out.println("addition of two no is:"+(num1+num2));
+            return num1+num2;
+        };
+        aobj.addition(30,20);
+        Subtraction sobj=(num1, num2) ->{
+            System.out.println("Subtraction of two no is:"+(num1-num2));
+            return num1-num2;
+        };
+        sobj.subtraction(30,20);
+        Multiplication mobj=(num1, num2) ->{
+            System.out.println("Multiplication is :"+(num1*num2));
+            return num1*num2;
+        };
+        mobj.multiplication(30,20);
+        Division dobj=(num1, num2) -> {
+            System.out.println("Division is :" + (num1 / num2));
+            return num1/num2;
+        };
+        dobj.division(30,20);
+
+
+
+    }
+}
