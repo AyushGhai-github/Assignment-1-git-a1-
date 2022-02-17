@@ -1,44 +1,32 @@
-import java.util.Scanner;
+package com.company;
 
-public class String_assignmentQ2 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int count =0;
-        int price,total=0;
-        int choice=0;
-        do{
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 
-            System.out.println("1) INSERT NEW PRICE");
-            System.out.println("2) VIEW PURCHASE TOTAL");
-            System.out.println("3) EXIT");
-            System.out.println("ENTER YOUR CHOICE: ");
-            choice=sc.nextInt();
-            switch (choice){
-                case 1:
-                    String s="yes";
-                    do{
-                        System.out.println("Insert" + (count+1) + "price");
-                        price = sc.nextInt();
-                        total += price;
-                        System.out.println(" Price has been saved to the file");
-                        System.out.println("Do you want to enter price for more items?(Yes/No)");
-                        s = sc.next();
-                        count++;
-                        System.out.println();
-                    }
-                    while(s.equalsIgnoreCase("Yes"));
-                    break;
-
-                case 2:
-                    System.out.println("Total price of all items is: " +total);
-                    break;
-
-                case 3:
-                    System.exit(0);
-                default:
-                    System.out.println("PLEASE ENTER THE CORRECT CHOICE!!!!");
-            }
-        }
-        while(choice !=3);
+public class Assignment3Q2
+{
+    public static void main(String[] args)
+    {
+        //to prove that Hashset in unordered//
+        HashSet<String>hobj=new HashSet<>();
+        hobj.add("ayush");
+        hobj.add("atharv");
+        hobj.add("omkar");
+        hobj.add("poonam");
+        hobj.add("tanmay");
+        hobj.add("pradumnya");
+        System.out.println(hobj);
+        System.out.println("hey i am unordered");
+        //to prove that LinkedHashSet in ordered//
+        LinkedHashSet<String>lobj=new LinkedHashSet<>();
+        lobj.add("ayush");
+        lobj.add("atharv");
+        lobj.add("omkar");
+        lobj.add("poonam");
+        lobj.add("tanmay");
+        lobj.add("pradumnya");
+        System.out.println(lobj);
+        System.out.println("hey i am ordered");
     }
+
 }
