@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class String_assignmentQ2 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int count =0;
+        int price,total=0;
+        int choice=0;
+        do{
+
+            System.out.println("1) INSERT NEW PRICE");
+            System.out.println("2) VIEW PURCHASE TOTAL");
+            System.out.println("3) EXIT");
+            System.out.println("ENTER YOUR CHOICE: ");
+            choice=sc.nextInt();
+            switch (choice){
+                case 1:
+                    String s="yes";
+                    do{
+                        System.out.println("Insert" + (count+1) + "price");
+                        price = sc.nextInt();
+                        total += price;
+                        System.out.println(" Price has been saved to the file");
+                        System.out.println("Do you want to enter price for more items?(Yes/No)");
+                        s = sc.next();
+                        count++;
+                        System.out.println();
+                    }
+                    while(s.equalsIgnoreCase("Yes"));
+                    break;
+
+                case 2:
+                    System.out.println("Total price of all items is: " +total);
+                    break;
+
+                case 3:
+                    System.exit(0);
+                default:
+                    System.out.println("PLEASE ENTER THE CORRECT CHOICE!!!!");
+            }
+        }
+        while(choice !=3);
+    }
+}
