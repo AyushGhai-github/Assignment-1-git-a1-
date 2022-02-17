@@ -1,0 +1,23 @@
+package Lamda_Assignment;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+public class Assignment4Q7 {
+    public static void main(String[] args) {
+        Map<String,Integer> map = new HashMap<>();
+        map.put("Ayush",1);
+        map.put("Poonam",2);
+        map.put("Omkar",3);
+        map.put("Atharv",4);
+        Assignment4Q7 assignment4Q7 = new Assignment4Q7();
+        System.out.println(assignment4Q7.convertKeyValueToString((HashMap<String, Integer>) map));
+    }
+    public String convertKeyValueToString(HashMap<String, Integer> map) {
+        String result = map.entrySet().stream()
+                .map(entry -> entry.getKey() + "-" + entry.getValue())
+                .collect(Collectors.joining(","));
+        return result;
+    }
+}
+
