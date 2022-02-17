@@ -1,0 +1,28 @@
+package com.company;
+import java.util.*;
+public class ArrayList_q3 {
+    public static void main(String[] args)
+    {
+        ArrayList<String>aobj=new ArrayList<>();
+        aobj.add("A");
+        aobj.add("quick");
+        aobj.add("brown");
+        aobj.add("fox");
+        aobj.add("jumps");
+        aobj.add("over");
+        aobj.add("the");
+        aobj.add("lazy");
+        aobj.add("dog");
+        Object[] objects =aobj.toArray();
+        for(Object obj:objects)
+        {
+            System.out.print(obj + " ");
+        }
+
+
+
+
+
+
+    }
+}
